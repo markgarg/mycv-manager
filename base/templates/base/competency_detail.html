@@ -1,0 +1,12 @@
+<h1>{{ competency.name }}</h1>
+<ul>
+	<li>Started: {{ competency.used_from_date }}</li>
+	{% if competency.used_to_date %}
+		<li>Until: {{ competency.used_to_date }}</li>
+	{% else %}
+		<li>Still at it!</li>
+	{% endif %}
+	{% if competency.primary %}
+		<li><i>Oh and this is my primary competency.</i></li>
+	{% endif %}
+</ul>
