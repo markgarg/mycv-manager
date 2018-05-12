@@ -1,11 +1,15 @@
-<h1>Hello there, I'm Rohit Macherla</h1>
-<br />
-{% if competencies %}
-    <ul>
-    {% for competency in competencies %}
-        <li><a href="/competency/{{ competency.id }}/">{{ competency }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Welcome!</p>
-{% endif %}
+{% extends 'base/base.html' %}
+
+{% block content %}
+	<h1>Hello there, I'm Rohit Macherla</h1>
+	<br />
+	{% if competencies %}
+		<ul>
+			{% for competency in competencies %}
+				<li><a href="/competency/{{ competency.id }}/">{{ competency }}</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>Welcome!</p>
+	{% endif %}
+{% endblock %}
