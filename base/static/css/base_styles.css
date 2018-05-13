@@ -1,0 +1,8 @@
+body {
+  font-family: proza_librelight, sans-serif;
+}
+
+.navbar {
+  display: inline-block;
+  text-align: center;
+}
