@@ -10,10 +10,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_librebold_italic';
     src: url('../fonts/proza-libre/prozalibre-bolditalic-webfont.woff2') format('woff2'),
@@ -22,10 +18,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libreextrabold';
     src: url('../fonts/proza-libre/prozalibre-extrabold-webfont.woff2') format('woff2'),
@@ -34,10 +26,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libreextrabold_italic';
     src: url('../fonts/proza-libre/prozalibre-extrabolditalic-webfont.woff2') format('woff2'),
@@ -46,10 +34,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libreitalic';
     src: url('../fonts/proza-libre/prozalibre-italic-webfont.woff2') format('woff2'),
@@ -58,10 +42,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_librelight';
     src: url('../fonts/proza-libre/prozalibre-light-webfont.woff2') format('woff2'),
@@ -70,10 +50,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_librelight_italic';
     src: url('../fonts/proza-libre/prozalibre-lightitalic-webfont.woff2') format('woff2'),
@@ -82,10 +58,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libremedium';
     src: url('../fonts/proza-libre/prozalibre-medium-webfont.woff2') format('woff2'),
@@ -94,10 +66,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libremedium_italic';
     src: url('../fonts/proza-libre/prozalibre-mediumitalic-webfont.woff2') format('woff2'),
@@ -106,10 +74,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libreregular';
     src: url('../fonts/proza-libre/prozalibre-regular-webfont.woff2') format('woff2'),
@@ -118,10 +82,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libresemibold';
     src: url('../fonts/proza-libre/prozalibre-semibold-webfont.woff2') format('woff2'),
@@ -130,10 +90,6 @@
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'proza_libresemibold_italic';
     src: url('../fonts/proza-libre/prozalibre-semibolditalic-webfont.woff2') format('woff2'),
@@ -141,4 +97,12 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+@font-face {
+    font-family: 'tallysregular';
+    src: url('tallys_15-webfont.woff2') format('woff2'),
+         url('tallys_15-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

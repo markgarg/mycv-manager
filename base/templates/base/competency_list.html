@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block content %}
+	<div class="col-sm">
+		{% if competencies %}
+			<ul>
+				{% for competency in competencies %}
+					<li><a href="/competency/{{ competency.id }}/">{{ competency }}</a></li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
+{% endblock %}

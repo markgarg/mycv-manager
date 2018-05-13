@@ -1,8 +1,23 @@
+html, body { min-height: 100%; }
 body {
   font-family: proza_librelight, sans-serif;
+  background-image: url('../images/adventure-alpine-background-355770.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
 }
-
+h1 {
+  font-family: tallysregular, serif;
+}
 .my-navbar-footer {
   display: inline-block;
   text-align: center;
+}
+.navbar.transparent {
+  background: rgba(0,0,0,0.2);
+}
+.my-main-header {
+  text-align: center;
+}
+.my-footer-item {
+  color: black;
 }

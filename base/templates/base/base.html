@@ -15,12 +15,12 @@
 	</head>
 	<body>
 		<header class="">
-			<nav class="navbar sticky-top navbar-expand navbar-light bg-light">
+			<nav class="navbar transparent sticky-top navbar-expand navbar-light">
 				<div class="container">
 					<div class="collapse navbar-collapse">
 						<div class="navbar-nav">
-							<a class="nav-item nav-link active" href="#">Home</a>
-							<a class="nav-item nav-link" href="#">Graphs</a>
+							<a class="nav-item nav-link active" href="/">Home</a>
+							<a class="nav-item nav-link" href="{% url 'competency_list' %}">Competencies</a>
 							<a class="nav-item nav-link" href="#">Contact</a>
 						</div>
 					</div>
@@ -29,16 +29,14 @@
 		</header>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					{% block content %}
-					{% endblock %}
-				</div>
+				{% block content %}
+				{% endblock %}
 			</div>
 		</div>
 		<footer>
 			<nav class="my-navbar-footer navbar fixed-bottom navbar-light bg-light">
-				<a class="nav-item m-5" href="https://www.linkedin.com/in/rohit-macherla-0b89077" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
-				<a class="nav-item m-5" href="https://twitter.com/mrohitkunal" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+				<a class="nav-item m-5 my-footer-item" href="https://www.linkedin.com/in/rohit-macherla-0b89077" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
+				<a class="nav-item m-5 my-footer-item" href="https://twitter.com/mrohitkunal" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
 			</nav>
 		</footer>
 	</body>
