@@ -1,12 +1,39 @@
 {% extends 'base/base.html' %}
 {% block content %}
-	<div class="col-sm">
-		{% if competencies %}
-			<ul>
-				{% for competency in competencies %}
-					<li><a href="/competency/{{ competency.id }}/">{{ competency }}</a></li>
-				{% endfor %}
-			</ul>
-		{% endif %}
+	<div class="container-fluid">
+		<div class="row justify-content-center" style="height: 100vh; overflow: auto;">
+			<div class="col-12">
+				<canvas id="canvas" class="canvas" width="1448" height="940" style="width: 724px; height: 470px;"></canvas>
+			</div>
+		</div>
 	</div>
+	{% load static %}
+	<script src="{% static 'js/wordcloud2.js' %}"></script>
+	<script type="text/javascript">
+		window.onload = function(e){
+			const competencies = JSON.parse('{{ competencies | escapejs }}')
+			console.log('competencies :' + competencies);
+			const wordCloudData = competencies.map(function(comp){
+				return [comp.name, comp.weight];
+			});
+			console.log('data :' + JSON.stringify(wordCloudData));
+			const options = {
+				gridSize: 18,
+				weightFactor: 16,
+				fontFamily: 'proza_libreitalic',
+				// color: function (word, weight) {
+				// 	return (weight === 12) ? '#f02222' : '#c09292';
+				// },
+				rotateRatio: 0.5,
+				rotationSteps: 2,
+				// backgroundColor: '#ffe0e0',
+				list: wordCloudData,
+				click: function(item){
+					window.location = "/competencies/" + item[0].toLowerCase() + "/";
+				},
+				hover: window.drawBox
+			}
+			WordCloud(document.getElementById('canvas'), options);
+		}
+	</script>
 {% endblock %}

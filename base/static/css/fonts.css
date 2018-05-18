@@ -101,8 +101,8 @@
 
 @font-face {
     font-family: 'tallysregular';
-    src: url('tallys_15-webfont.woff2') format('woff2'),
-         url('tallys_15-webfont.woff') format('woff');
+    src: url('../fonts/tallys/tallys_15-webfont.woff2') format('woff2'),
+         url('../fonts/tallys/tallys_15-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

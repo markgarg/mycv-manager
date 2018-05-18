@@ -8,6 +8,7 @@ class Competency(models.Model):
     used_from_date = models.DateField()
     used_to_date = models.DateField(null=True, blank=True)
     primary = models.BooleanField(default=False)
+    weight = models.IntegerField(default=0)
 
     class Meta:
         verbose_name_plural = 'Competencies'
