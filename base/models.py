@@ -4,7 +4,7 @@ from django.db import models
 class Competency(models.Model):
     """Models Technical Competency."""
 
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=True, primary_key=True)
     used_from_date = models.DateField()
     used_to_date = models.DateField(null=True, blank=True)
     primary = models.BooleanField(default=False)
@@ -25,17 +25,15 @@ class Competency(models.Model):
             return "Using {0} from {1}".format(self.name,
                                                readable_used_from_date)
 
-    # def get_absolute_url(self):
-    #     """Unique URL for the competency."""
-    #     from django.urls import reverse
-    #     return reverse('', args=[self.name])
+    def get_absolute_url(self):
+        """Unique URL for the competency."""
+        from django.urls import reverse
+        return reverse('competency_detail', args=[self.name])
 
-    # def save(self, *args, **kwargs):
-    #     """Override save."""
-    #     if(self.used_to_date):
-    #         self.days_used = self.days_between(self.used_from_date,
-    #                                            self.used_to_date)
-    #     super().save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        """Override save."""
+        self.name = self.name.lower()
+        super().save(*args, **kwargs)
 
     # def days_between(self, from_date, to_date):
     #     """Calculate days between from_date and to_date.

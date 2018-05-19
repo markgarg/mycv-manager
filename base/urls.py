@@ -7,6 +7,6 @@ urlpatterns = [
     path('', views.index, name='base'),
     path('competencies/', views.competency_list, name='competency_list'),
     # ex: /competency/1
-    path('competency/<int:competency_id>/', views.competency_detail,
+    path('competencies/<competency_name>/', views.competency_detail,
          name='competency_detail')
 ]
