@@ -15,14 +15,15 @@
 	</head>
 	<body>
 		<header class="">
-			<nav class="navbar transparent sticky-top navbar-expand navbar-light">
-				<div class="container">
-					<div class="collapse navbar-collapse">
-						<div class="navbar-nav">
-							<a class="nav-item nav-link active" href="/">Home</a>
-							<a class="nav-item nav-link" href="{% url 'competency_list' %}">Competencies</a>
-							<a class="nav-item nav-link" href="#">Contact</a>
-						</div>
+			<nav class="navbar transparent sticky-top navbar-expand-sm navbar-light">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link active" href="/">Home</a>
+						<a class="nav-item nav-link" href="{% url 'competency_list' %}">Competencies</a>
+						<a class="nav-item nav-link" href="{% url 'about_site' %}">About this site</a>
 					</div>
 				</div>
 			</nav>
@@ -30,12 +31,17 @@
 		
 		{% block content %}
 		{% endblock %}
-		
+
 		<footer>
-			<nav class="my-navbar-footer navbar fixed-bottom navbar-light bg-light">
-				<a class="nav-item m-5 my-footer-item" href="https://www.linkedin.com/in/rohit-macherla-0b89077" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
-				<a class="nav-item m-5 my-footer-item" href="https://twitter.com/mrohitkunal" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+			<nav class="my-navbar-footer navbar transparent fixed-bottom navbar-dark bg-dark">
+				<a class="nav-item my-footer-item" href="https://www.linkedin.com/in/rohit-macherla-0b89077" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
+				<a class="nav-item my-footer-item" href="https://twitter.com/mrohitkunal" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+				<a class="nav-item my-footer-item" href="https://github.com/markgarg" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+				
 			</nav>
 		</footer>
+		<script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 	</body>
 </html>

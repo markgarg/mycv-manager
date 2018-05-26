@@ -19,20 +19,18 @@
 			console.log('data :' + JSON.stringify(wordCloudData));
 			const options = {
 				gridSize: 18,
-				weightFactor: 16,
+				weightFactor: 18,
 				fontFamily: 'proza_libreitalic',
-				minSize: '12px',
-				// color: function (word, weight) {
-				// 	return (weight === 12) ? '#f02222' : '#c09292';
-				// },
-				rotateRatio: 0.5,
+				minSize: 32,
 				rotationSteps: 2,
-				// backgroundColor: '#ffe0e0',
+				backgroundColor: '#EAF3F9',
 				list: wordCloudData,
 				click: function(item){
 					window.location = "/competencies/" + item[0].toLowerCase() + "/";
 				},
-				hover: window.drawBox
+				hover: window.drawBox,
+				minRotation: 0,
+				maxRotation: 45
 			}
 			WordCloud(document.getElementById('canvas'), options);
 		}

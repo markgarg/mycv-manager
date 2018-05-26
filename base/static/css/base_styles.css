@@ -1,16 +1,25 @@
 html, body { min-height: 100%; }
 body {
   font-family: proza_librelight, sans-serif;
-  background-image: url('../images/adventure-alpine-background-355770.jpg');
+  /*background-image: url('../images/adventure-alpine-background-355770.jpg');*/
+  background-image: url('../images/dominik-schroder-14534-unsplash.jpg');
   background-repeat:no-repeat;
   background-size:cover;
+  background-position: center;
 }
 h1 {
   font-family: tallysregular, serif;
 }
-.my-navbar-footer {
+/*.my-navbar-footer {
   display: inline-block;
   text-align: center;
+}*/
+.my-navbar-footer {
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: flex-between; /* flush against edges */
+  -webkit-justify-content: flex-around;  /* space at left/right */
+  justify-content: space-around;
 }
 .navbar.transparent {
   background: rgba(0,0,0,0.2);
@@ -19,5 +28,8 @@ h1 {
   text-align: center;
 }
 .my-footer-item {
-  color: black;
+  color: white;
+}
+.my-right {
+  float: right;
 }

@@ -41,3 +41,19 @@ class Competency(models.Model):
     #     To be extended later for months/years between.
     #     """
     #     return to_date - from_date
+
+
+class Company(models.Model):
+    """Models a company I worked for."""
+
+    name = models.CharField(max_length=100)
+    url = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = 'Companies'
+
+    def get_absolute_url(self):
+        """Unique URL for the competency."""
+        from django.urls import reverse
+        return reverse('company_detail', args=[self.id])
+
